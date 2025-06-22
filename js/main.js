@@ -92,10 +92,8 @@ function transitionToSetup() {
 
 function startGame() {
     // Winning score and difficulty are set by ui.js through the bridge
-    // Or, if ui.js only updates display, read them here from DOM like before.
-    // For this example, ui.js uses the bridge.
-
-
+    // Or, if ui.js only updates display, read them here from DOM like before
+    // For this example, ui.js uses the bridge
     // Set active computer parameters
     const selectedParams = Config.computerParamsByDifficulty[currentComputerDifficulty];
     activeComputerParams = {
