@@ -4,7 +4,7 @@ import * as Gfx from './graphics.js';
 import * as Phys from './physics.js';
 import * as GameObjects from './gameObjects.js';
 import * as UI from './ui.js';
-import * as Player from './playerControls.js';
+import * as Player from './playerControlls.js';
 import * as Computer from './computerOpponent.js';
 
 // --- Global Game State & Variables ---
