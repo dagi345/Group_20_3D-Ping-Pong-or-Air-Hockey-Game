@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>3D Air Hockey - Enhanced UI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="score">Player: 0 - Computer: 0</div>
+
+    <div id="gameSetupScreen" class="game-overlay">
+        <div class="overlay-content">
+            <h1>Air Hockey Arena</h1>
+            <h2>Game Setup</h2>
+            <div class="form-group">
+                <label for="winScoreSelect">Winning Score:</label>
+                <select id="winScoreSelect">
+                    <option value="3">3 Goals</option>
+                    <option value="5" selected>5 Goals</option>
+                    <option value="7">7 Goals</option>
+                    <option value="10">10 Goals</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            <div id="customScoreInputContainer" class="form-group" style="display:none;">
+                <label for="customWinScore">Custom Score (1-99):</label>
+                <input type="number" id="customWinScore" value="5" min="1" max="99">
+            </div>
+             <div class="form-group">
+                <label for="computerDifficultySelect">Computer Difficulty:</label>
+                <select id="computerDifficultySelect">
+                    <option value="EASY">Easy</option>
+                    <option value="MEDIUM" selected>Medium</option>
+                    <option value="HARD">Hard</option>
+                </select>
+            </div>
+            <p id="gameSettingsDisplay"></p>
+            <button id="startGameButton">Start Game</button>
+        </div>
+    </div>
+
+    <div id="gameOverScreen" class="game-overlay">
+        <div class="overlay-content">
+            <h1 id="gameOverMessage"></h1>
+            <button id="playAgainButton">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+
+    <!-- Game Modules -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
